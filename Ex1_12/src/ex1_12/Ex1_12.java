@@ -3,12 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ex1_10;
+package ex1_12;
 
-public class Ex1_10 {
+/**
+ *
+ * @author Garrett
+ */
+public class Ex1_12 {
 
     public static void main(String[] args) {
         int i        =0;
+        String []num = new String [9];
         valbool[]obj = new valbool[9];
         valbool seq1 = new valbool() ;
         valbool seq2 = new valbool() ;
@@ -30,18 +35,18 @@ public class Ex1_10 {
         obj[8]=seq9;
         
         obj[i].value=1;
-        obj[i].makestr(i+1);
+        num[i]=obj[i].makestr(i+1);
         i++;
         obj[i].value=1;
-        obj[i].makestr(i+1);
+        num[i]=obj[i].makestr(i+1);
         for(i++; i<obj.length; i++){
             obj[i].value=obj[i-2].value+obj[i-1].value;
             obj[i].check();
-            obj[i].makestr(i+1);
+            num[i]=obj[i].makestr(i+1);
         }
         i=0;
-        while(i<obj.length){
-            System.out.println(obj[i].nstr);
+        while(i<num.length){
+            System.out.println(num[i]);
             i++;
         }
     }

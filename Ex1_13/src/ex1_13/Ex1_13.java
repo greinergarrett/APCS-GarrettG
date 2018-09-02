@@ -3,9 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ex1_10;
+package ex1_13;
 
-public class Ex1_10 {
+/**
+ *
+ * @author Garrett
+ */
+public class Ex1_13 {
 
     public static void main(String[] args) {
         int i        =0;
@@ -30,18 +34,18 @@ public class Ex1_10 {
         obj[8]=seq9;
         
         obj[i].value=1;
-        obj[i].makestr(i+1);
         i++;
         obj[i].value=1;
-        obj[i].makestr(i+1);
         for(i++; i<obj.length; i++){
             obj[i].value=obj[i-2].value+obj[i-1].value;
             obj[i].check();
-            obj[i].makestr(i+1);
         }
         i=0;
         while(i<obj.length){
-            System.out.println(obj[i].nstr);
+            if(obj[i].iseven)
+                System.out.printf("%d: %d *%n", i+1, obj[i].value);
+            else
+                System.out.printf("%d: %d%n", i+1, obj[i].value);
             i++;
         }
     }
